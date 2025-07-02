@@ -1,38 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  background-color: white;
+}
+
+figure {
+  width: 95%;
+  margin: 0 auto;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: inherit;
+  border: 1px solid #ccc;
+}
+
+.carroussel {
+  position: relative;
+  width: 100%;
+  
+}
+
+#logo {
+  width: 250px;
+  margin: 1em auto;
+  margin-bottom: 2em;
+  height: fit-content;
+}
+#logo img {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+
+}
+
+.footer-controls {
+  position: absolute;
+  bottom: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  display: flex;
+  line-height: 0;
+  align-items: center;
+  justify-content: space-between;
   color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  border: 1px solid #656565;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.footer-controls > * {
+  border-radius: 0;
+  flex: 1;
+  text-align: center;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.controls button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#imager.animate {
+  animation: animate ease-in-out 500ms;
+}
+
+.buy-but {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+.digital-stores {
+  display: flex;
+  gap: 1em;
+}
+.digital-stores figure {
+  width: 150px;
+  border-radius: 10px;
+}
+.buy-but button {
+  background-color: green;
+  border: none;
+  color: white;
+  font-weight: 900;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid darkgreen;
+}
+
+.text-content {
+  text-align: center;
+  color: green;
+}
+.text-content h2 {
+  color: rgb(0, 46, 0);
+  font-size: 20px;
+  margin: 0;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(50px);
+    filter: blur(10px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: translateY(0);
+    filter: blur(0px);
+    opacity: 1;
   }
+}
+
+@media screen and (max-width: 1020px) {
+  
 }
